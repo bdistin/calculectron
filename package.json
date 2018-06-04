@@ -4,7 +4,8 @@
   "description": "A calculator made using electron. Intended for the author's personal use.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/AlaeaCrablet/calculectron/issues"
   },
-  "homepage": "https://github.com/AlaeaCrablet/calculectron#readme"
+  "homepage": "https://github.com/AlaeaCrablet/calculectron#readme",
+  "devDependencies": {
+    "electron": "^2.0.2"
+  }
 }
