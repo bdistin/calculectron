@@ -4,14 +4,9 @@
 }
 
 .input {
-	grid-column: 1 / span 3;
+	grid-column: 1 / span 2;
 }
 
-body {
-	height: 100%;
-}
-
-.footer {
-	position: absolute;
-	bottom: 0;
+.calcSubmit {
+	grid-column: 3 / 4;
 }
