@@ -1,15 +1,17 @@
 .main-container {
-	/* 	display: grid | inline-grid; */
-	grid-template-columns: 100px 100px 100px;
-	grid-template-rows: 125px 125px 125px 125px;
+	display: grid;
+	grid-template-columns: auto auto auto;
 }
 
-.num1 {
-	grid-column: 1 / 2;
-	grid-row: 1 / 2;
+.input {
+	grid-column: 1 / span 3;
 }
 
-.num2 {
-	grid-column: 2 / 3;
-	grid-row: 1 / 2;
+body {
+	height: 100%;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
 }
