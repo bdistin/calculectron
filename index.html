@@ -3,53 +3,64 @@
   <head>
 	  
 	<link rel="stylesheet" href="Stylesheets/structure.css">
+	<link rel="stylesheet" href="Stylesheets/defaultStyle.css">
+	
+	<script src="Buttons/numbers.js"></script>
 	
     <meta charset="UTF-8">
     <title>Calculectron</title>
   </head>
   <body>
     <h1>Calculectron</h1>
-	
-	<div class="main-container">
-		<div class="col input">
-			<input type="text" name="calcArea">
+    
+    <!--
+	    TODO: wrap the upper controller in it's own div grid. 2 rows, full-width Input Area and Calc Button
+	--> 
+    <div class="calcController">
+	    <div class="col calcInput">
+			<input id="calcArea" type="text" name="calcArea" value="content">
 		</div>
 		<div class="col calcSubmit">
 			<button>Calc</button>
 		</div>
+    </div>
+    
+	<div class="main-container">
 		<div class="col num1">
-			<button>1</button>
+			<button class="numButton" onclick=" test(); ">1</button>
 		</div>
 		<div class="col num2">
-			<button>2</button>
+			<button class="numButton">2</button>
 		</div>
 		<div class="col num3">
-			<button>3</button>
+			<button class="numButton">3</button>
 		</div>
 		<div class="col num4">
-			<button>4</button>
+			<button class="numButton">4</button>
 		</div>
 		<div class="col num5">
-			<button>5</button>
+			<button class="numButton">5</button>
 		</div>
 		<div class="col num6">
-			<button>6</button>
+			<button class="numButton">6</button>
 		</div>
 		<div class="col num7">
-			<button>7</button>
+			<button class="numButton">7</button>
 		</div>
 		<div class="col num8">
-			<button>8</button>
+			<button class="numButton">8</button>
 		</div>
 		<div class="col num9">
-			<button>9</button>
+			<button class="numButton">9</button>
 		</div>
 		<div class="col num0">
-			<button>0</button>
+			<button class="numButton">0</button>
 		</div>
 	</div>
 	
-	<footer>
+  </body>
+  
+  <footer>
 		Running Node.JS <script>document.write(process.versions.node)</script>, 
 		Chromium <script>document.write(process.versions.chrome)</script>, 
 		and Electron <script>document.write(process.versions.electron)</script>.
@@ -58,5 +69,4 @@
       // You can also require other files to run in this process
       require('./renderer.js')
     </script>
-  </body>
 </html>
