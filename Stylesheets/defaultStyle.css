@@ -1,0 +1,26 @@
+* {
+	font-family: sans-serif;
+}
+
+html {
+	background-color: #ababb4;
+}
+
+.numButton {
+	background-color: #bcbcbc;
+	color: black;
+	border: none;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 4px;
+	width: 95%;
+	margin: 3px;
+}
+
+.numButton:hover {
+	background-color: black;
+	color: #e7e7e7;
+}
