@@ -10,17 +10,22 @@ html {
 	background-color: #bcbcbc;
 	color: black;
 	border: none;
-	padding: 10px;
+	padding: 5px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
-	border-radius: 4px;
-	width: 95%;
+	width: 98%;
 	margin: 3px;
 }
 
 .numButton:hover {
 	background-color: black;
 	color: #e7e7e7;
+}
+
+footer {
+	font-size: 10px;
+	color: #e7e7e7;
+	margin-bottom: 2px;
 }
