@@ -2,12 +2,12 @@
 <html>
   <head>
 	  
-	<link rel="stylesheet" href="Stylesheets/structure.css">
-	<link rel="stylesheet" href="Stylesheets/defaultStyle.css">
+	<link rel='stylesheet' href='Stylesheets/structure.css'>
+	<link rel='stylesheet' href='Stylesheets/defaultStyle.css'>
 	
-	<script src="Buttons/numbers.js"></script>
+	<script src='Buttons/numbers.js'></script>
 	
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <title>Calculectron</title>
   </head>
   <body>
@@ -16,45 +16,45 @@
     <!--
 	    TODO: wrap the upper controller in it's own div grid. 2 rows, full-width Input Area and Calc Button
 	--> 
-    <div class="calcController">
-	    <div class="col calcInput">
-			<input id="calcArea" type="text" name="calcArea" value="content">
+    <div class='calcController'>
+	    <div class='col calcInput'>
+			<input id='calcArea' type='textArea' name='calcArea' value=''>
 		</div>
-		<div class="col calcSubmit">
+		<div class='col calcSubmit'>
 			<button>Calc</button>
 		</div>
     </div>
     
-	<div class="main-container">
-		<div class="col num1">
-			<button class="numButton" onclick=" test(); ">1</button>
+	<div class='main-container'>
+		<div class='col num1'>
+			<button id='1' class='numButton' onclick='num(this.id)'>1</button>
 		</div>
-		<div class="col num2">
-			<button class="numButton">2</button>
+		<div class='col num2'>
+			<button id='2' class='numButton' onclick='num(this.id)'>2</button>
 		</div>
-		<div class="col num3">
-			<button class="numButton">3</button>
+		<div class='col num3'>
+			<button id='3' class='numButton' onclick='num(this.id)'>3</button>
 		</div>
-		<div class="col num4">
-			<button class="numButton">4</button>
+		<div class='col num4'>
+			<button id='4' class='numButton' onclick='num(this.id)'>4</button>
 		</div>
-		<div class="col num5">
-			<button class="numButton">5</button>
+		<div class='col num5'>
+			<button id='5' class='numButton' onclick='num(this.id)'>5</button>
 		</div>
-		<div class="col num6">
-			<button class="numButton">6</button>
+		<div class='col num6'>
+			<button id='6' class='numButton' onclick='num(this.id)'>6</button>
 		</div>
-		<div class="col num7">
-			<button class="numButton">7</button>
+		<div class='col num7'>
+			<button id='7' class='numButton' onclick='num(this.id)'>7</button>
 		</div>
-		<div class="col num8">
-			<button class="numButton">8</button>
+		<div class='col num8'>
+			<button id='8' class='numButton' onclick='num(this.id)'>8</button>
 		</div>
-		<div class="col num9">
-			<button class="numButton">9</button>
+		<div class='col num9'>
+			<button id='9' class='numButton' onclick='num(this.id)'>9</button>
 		</div>
-		<div class="col num0">
-			<button class="numButton">0</button>
+		<div class='col num0'>
+			<button id='0' class='numButton' onclick='num(this.id)'>0</button>
 		</div>
 	</div>
 	
