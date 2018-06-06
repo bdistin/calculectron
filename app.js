@@ -1,8 +1,9 @@
-const electron = require('electron')
+const { electron, Menu, MenuItem, app, BrowserWindow, ipcMain } = require('electron')
+
 // Module to control application life.
-const app = electron.app
+//const app = electron.app
 // Module to create native browser window.
-const BrowserWindow = electron.BrowserWindow
+//const BrowserWindow = electron.BrowserWindow
 
 const path = require('path')
 const url = require('url')
@@ -60,5 +61,21 @@ app.on('activate', function () {
 	}
 })
 
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
+//Create a context menu that holds a reload option. 
+//TODO: Add themes to the context menu
+const menu = new Menu()
+menu.append(new MenuItem({
+	label: 'Reload',
+	click: () => { mainWindow.reload() }
+	}))
+
+app.on('browser-window-created', (event, win) => {
+	win.webContents.on('context-menu', (e, params) => {
+		menu.popup(win, params.x, params.y)
+	})
+})
+
+ipcMain.on('show-context-menu', (event) => {
+	const win = BrowserWindow.fromWebContents(event.sender)
+	menu.popup(win)
+})
