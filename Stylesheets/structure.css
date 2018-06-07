@@ -7,6 +7,37 @@
 	grid-column: 2 / 3;
 }
 
+.calcButton {
+	display: inline-block;
+	width: 98%;
+	margin: 3px;
+	padding: 5px;
+}
+
+.calcInput {
+	grid-column: 1 / 4;
+	width: 100%;
+}
+
+.operatorContainer {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+}
+
+.calcContainter {
+
+}
+
+.calcBox {
+	display: block;
+	width: 100%;
+}
+
+.calcButton {
+	display: block;
+	width: 100%;
+}
+
 footer {
 	position: fixed;
 	bottom: 0;
