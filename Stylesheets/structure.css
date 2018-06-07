@@ -3,6 +3,12 @@
 	grid-template-columns: auto auto auto;
 }
 
+.numButton {
+	padding: 5px;
+	width: 98%;
+	margin: 3px;
+}
+
 .num0 {
 	grid-column: 2 / 3;
 }
@@ -31,6 +37,7 @@
 .calcBox {
 	display: block;
 	width: 100%;
+
 }
 
 .calcButton {
@@ -41,4 +48,5 @@
 footer {
 	position: fixed;
 	bottom: 0;
+	margin-bottom: 2px;
 }

@@ -10,13 +10,9 @@ html {
 	background-color: #bcbcbc;
 	color: black;
 	border: none;
-	padding: 5px;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
 	font-size: 16px;
-	width: 98%;
-	margin: 3px;
 }
 
 .numButton:hover {
@@ -31,7 +27,6 @@ html {
 	text-align: center;
 	text-decoration: none;
 	font-size: 16px;
-	margin: 3px;
 }
 
 .calcButton:hover {
@@ -42,5 +37,4 @@ html {
 footer {
 	font-size: 10px;
 	color: #e7e7e7;
-	margin-bottom: 2px;
 }
