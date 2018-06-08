@@ -1,84 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-	  
-	<link rel="stylesheet" href="Stylesheets/structure.css">
-	<link rel="stylesheet" href="Stylesheets/defaultStyle.css">
+	<head>
+		<link rel="stylesheet" href="Stylesheets/structure.css">
+		<link rel="stylesheet" href="Stylesheets/defaultStyle.css">
+		
+		<script src="functions.js"></script>
+		
+		<script>
+		// You can also require other files to run in this process
+		require("./renderer.js")
+		</script>
+		
+		<meta charset="UTF-8">
+		<title>Calculectron</title>
+	</head>
 	
-	<script src="Buttons/numbers.js"></script>
+	<body>
+		<h1>Calculectron</h1>
+		
+		<div class="calcContainer">
+			<div class="calcControl calcInput">
+				<input id="calcArea" class="calcBox" type="text" name="calcArea" value="">
+			</div>
+			<div class="calcControl calcSubmit">
+				<button class="calcButton" onclick="calc()">Calc</button>
+			</div>
+			<div class="calcControl calcReset">
+				<button class="numButton" onclick="reset()">Reset</button>
+			</div>
+		</div>
+		
+		<div class="operatorContainer">
+			<div class="col op+">
+				<button id="+" class="numButton" onclick="num(this.id)">+</button>
+			</div>
+			<div class="col op-">
+				<button id="-" class="numButton" onclick="num(this.id)">-</button>
+			</div>
+			<div class="col op*">
+				<button id="*" class="numButton" onclick="num(this.id)">*</button>
+			</div>
+			<div class="col op/">
+				<button id="/" class="numButton" onclick="num(this.id)">/</button>
+			</div>
+		</div>
+		
+		<div class="main-container">
+			<div class="col num1">
+				<button id="1" class="numButton" onclick="num(this.id)">1</button>
+			</div>
+			<div class="col num2">
+				<button id="2" class="numButton" onclick="num(this.id)">2</button>
+			</div>
+			<div class="col num3">
+				<button id="3" class="numButton" onclick="num(this.id)">3</button>
+			</div>
+			<div class="col num4">
+				<button id="4" class="numButton" onclick="num(this.id)">4</button>
+			</div>
+			<div class="col num5">
+				<button id="5" class="numButton" onclick="num(this.id)">5</button>
+			</div>
+			<div class="col num6">
+				<button id="6" class="numButton" onclick="num(this.id)">6</button>
+			</div>
+			<div class="col num7">
+				<button id="7" class="numButton" onclick="num(this.id)">7</button>
+			</div>
+			<div class="col num8">
+				<button id="8" class="numButton" onclick="num(this.id)">8</button>
+			</div>
+			<div class="col num9">
+				<button id="9" class="numButton" onclick="num(this.id)">9</button>
+			</div>
+			<div class="col num0">
+				<button id="0" class="numButton" onclick="num(this.id)">0</button>
+			</div>
+		</div>
 	
-    <meta charset="UTF-8">
-    <title>Calculectron</title>
-  </head>
-  <body>
-    <h1>Calculectron</h1>
-    
-    <div class="calcContainer">
-	    <div class="calcControl calcInput">
-			<input id="calcArea" class="calcBox" type="textArea" name="calcArea" value="">
-		</div>
-		<div class="calcControl calcSubmit">
-			<button class="calcButton">Calc</button>
-		</div>
-    </div>
-    
-    <div class="operatorContainer">
-	    <div class="col op+">
-		    <button id="+" class="numButton" onclick="num(this.id)">+</button>
-	    </div>
-	    <div class="col op-">
-		    <button id="-" class="numButton" onclick="num(this.id)">-</button>
-	    </div>
-	    <div class="col op*">
-		    <button id="*" class="numButton" onclick="num(this.id)">*</button>
-	    </div>
-	    <div class="col op/">
-		    <button id="/" class="numButton" onclick="num(this.id)">/</button>
-	    </div>
-    </div>
-    
-	<div class="main-container">
-		<div class="col num1">
-			<button id="1" class="numButton" onclick="num(this.id)">1</button>
-		</div>
-		<div class="col num2">
-			<button id="2" class="numButton" onclick="num(this.id)">2</button>
-		</div>
-		<div class="col num3">
-			<button id="3" class="numButton" onclick="num(this.id)">3</button>
-		</div>
-		<div class="col num4">
-			<button id="4" class="numButton" onclick="num(this.id)">4</button>
-		</div>
-		<div class="col num5">
-			<button id="5" class="numButton" onclick="num(this.id)">5</button>
-		</div>
-		<div class="col num6">
-			<button id="6" class="numButton" onclick="num(this.id)">6</button>
-		</div>
-		<div class="col num7">
-			<button id="7" class="numButton" onclick="num(this.id)">7</button>
-		</div>
-		<div class="col num8">
-			<button id="8" class="numButton" onclick="num(this.id)">8</button>
-		</div>
-		<div class="col num9">
-			<button id="9" class="numButton" onclick="num(this.id)">9</button>
-		</div>
-		<div class="col num0">
-			<button id="0" class="numButton" onclick="num(this.id)">0</button>
-		</div>
-	</div>
-	
-  </body>
-  
-  <footer>
+		<footer>
 		Running Node.JS <script>document.write(process.versions.node)</script>, 
 		Chromium <script>document.write(process.versions.chrome)</script>, 
 		and Electron <script>document.write(process.versions.electron)</script>.
-	</footer>
-    <script>
-      // You can also require other files to run in this process
-      require("./renderer.js")
-    </script>
+		</footer>
+		
+	</body>
+	
 </html>
