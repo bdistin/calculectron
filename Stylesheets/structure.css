@@ -13,9 +13,10 @@
 	grid-column: 2 / 3;
 }
 
+/*
 .calcButton {
 	display: inline-block;
-	width: 98%;
+	width: 73%;
 	margin: 3px;
 	padding: 5px;
 }
@@ -24,6 +25,7 @@
 	grid-column: 1 / 4;
 	width: 100%;
 }
+*/
 
 .operatorContainer {
 	display: grid;
