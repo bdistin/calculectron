@@ -17,8 +17,8 @@ function createWindow () {
 	mainWindow = new BrowserWindow({
 		width: 350, 
 		height: 425, 
-		resizable: false,
-		titleBarStyle: 'customButtonsOnHover'
+		resizable: false
+		//titleBarStyle: 'customButtonsOnHover'
 	})
 
 	// and load the index.html of the app.
