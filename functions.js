@@ -14,3 +14,11 @@ function reset() {
 }
 
 //TODO: Add keypress handlers for keyboarding values and operators.
+window.addEventListener('keypress', keyHandler, false)
+
+function keyHandler(e) {
+	var keyPressed = e.keyCode
+	if (keyPressed == 88 ) {
+		alert('thing')
+	}
+}
