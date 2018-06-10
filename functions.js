@@ -12,3 +12,5 @@ function calc() {
 function reset() {
 	document.getElementById('calcArea').value = ''
 }
+
+//TODO: Add keypress handlers for keyboarding values and operators.
