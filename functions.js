@@ -1,3 +1,10 @@
+const eshiftValues = {
+	[48]: ')',
+	[56]: '*',
+	[57]: '(',
+	[187]: '+'
+}
+
 //Add the value for the clicked button to the calcArea text input
 function num(id) {
 	var calcArea = document.getElementById('calcArea')
@@ -25,63 +32,8 @@ window.onkeydown = function (e) {
 	var keyValue = String.fromCharCode(key)
 
 	//Check for shift key alterations first
-	if (e.shiftKey) {
-		switch (key) {
-			case 48:	//keyValue == )
-				calcArea.value += ')'
-				break
-			case 56:	//keyValue == *
-				calcArea.value += '*'
-				break
-			case 57:	//keyValue == (
-				calcArea.value += '('
-				break
-			case 187:	//keyValue == +
-				calcArea.value += '+'
-				break
-		}
-	}
-
-	//Bind keyEvents for all Calc feature needs
-	switch (key) {
-		case 13:	//keyValue == Enter
-			calc()
-			break
-		case 48:	//keyValue == 0
-			calcArea.value += keyValue
-			break
-		case 49:	//keyValue == 1
-			calcArea.value += keyValue
-			break
-		case 50:	//keyValue == 2
-			calcArea.value += keyValue
-			break
-		case 51:	//keyValue == 3
-			calcArea.value += keyValue
-			break
-		case 52:	//keyValue == 4
-			calcArea.value += keyValue
-			break
-		case 53:	//keyValye == 5
-			calcArea.value += keyValue
-			break
-		case 54:	//keyValye == 6
-			calcArea.value += keyValue
-			break
-		case 55:	//keyValue == 7
-			calcArea.value += keyValue
-			break
-		case 56:	//keyValue == 8
-			calcArea.value += keyValue
-			break
-		case 57:	//keyValue == 9
-			calcArea.value += keyValue
-			break
-		case 106:	//keyValue == *
-			calcArea.value += keyValue
-			break
-		case 189:	//keyValue == -
-			calcArea.value += '-'
-			break
-	}
+	if (e.shiftKey) calcArea.value += eshiftValues[key] || ''
+	else if (key === 13) calc()
+	else if ((key >= 48 && key <=57) || key === 106) calcArea.value += keyValue
+	else if (key===189) calcArea.value += '-'
 }
