@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const { ipcRenderer } = require('electron');
 
 const contextMenuBtn = document.getElementById('context-menu');
